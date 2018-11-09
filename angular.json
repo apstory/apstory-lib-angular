@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "apstorymq-client": {
+      "root": "projects/apstorymq-client",
+      "sourceRoot": "projects/apstorymq-client/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/apstorymq-client/tsconfig.lib.json",
+            "project": "projects/apstorymq-client/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/apstorymq-client/src/test.ts",
+            "tsConfig": "projects/apstorymq-client/tsconfig.spec.json",
+            "karmaConfig": "projects/apstorymq-client/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/apstorymq-client/tsconfig.lib.json",
+              "projects/apstorymq-client/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "apstory-lib"

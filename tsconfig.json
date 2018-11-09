@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "apstorymq-client": [
+        "dist/apstorymq-client"
+      ],
+      "apstorymq-client/*": [
+        "dist/apstorymq-client/*"
+      ]
+    }
   }
 }

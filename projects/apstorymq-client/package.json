@@ -1,0 +1,13 @@
+{
+  "name": "apstorymq-client",
+  "version": "1.0.8",
+  "peerDependencies": {
+    "@angular/common": "^7.0.0",
+    "@angular/core": "^7.0.0"
+  },
+  "keywords": ["angular", "library", "apstorymq", "message bus", "integration", "pub sub", "publish", "subscribe", "typescript"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apstory/apstorymq-client-angular"
+  }
+}
