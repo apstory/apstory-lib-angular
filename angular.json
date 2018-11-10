@@ -203,6 +203,76 @@
           }
         }
       }
+    },
+    "apstorylogger-client": {
+      "root": "projects/apstorylogger-client",
+      "sourceRoot": "projects/apstorylogger-client/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/apstorylogger-client/tsconfig.lib.json",
+            "project": "projects/apstorylogger-client/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/apstorylogger-client/src/test.ts",
+            "tsConfig": "projects/apstorylogger-client/tsconfig.spec.json",
+            "karmaConfig": "projects/apstorylogger-client/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/apstorylogger-client/tsconfig.lib.json",
+              "projects/apstorylogger-client/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "apstorylogger": {
+      "root": "projects/apstorylogger",
+      "sourceRoot": "projects/apstorylogger/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/apstorylogger/tsconfig.lib.json",
+            "project": "projects/apstorylogger/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/apstorylogger/src/test.ts",
+            "tsConfig": "projects/apstorylogger/tsconfig.spec.json",
+            "karmaConfig": "projects/apstorylogger/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/apstorylogger/tsconfig.lib.json",
+              "projects/apstorylogger/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "apstory-lib"

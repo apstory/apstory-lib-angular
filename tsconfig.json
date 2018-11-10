@@ -29,6 +29,18 @@
       ],
       "apstorydnn-navigation/*": [
         "dist/apstorydnn-navigation/*"
+      ],
+      "apstorylogger-client": [
+        "dist/apstorylogger-client"
+      ],
+      "apstorylogger-client/*": [
+        "dist/apstorylogger-client/*"
+      ],
+      "apstorylogger": [
+        "dist/apstorylogger"
+      ],
+      "apstorylogger/*": [
+        "dist/apstorylogger/*"
       ]
     }
   }
