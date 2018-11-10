@@ -1,9 +1,14 @@
 {
   "name": "apstorylogger",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0"
+  },
+  "keywords": ["angular", "applicationinsights-js", "application-insights", "angular-applicationinsights", "microsoft application insights javascript sdk", "typescript", "javascript-sdk"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apstory/apstorylogger-angular"
   },
   "devDependencies": {
     "@types/applicationinsights-js": "^1.0.7"
