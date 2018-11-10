@@ -1,0 +1,13 @@
+{
+  "name": "apstorydnn-navigation-angular",
+  "version": "1.0.2",
+  "peerDependencies": {
+    "@angular/common": "^7.0.0",
+    "@angular/core": "^7.0.0"
+  },
+  "keywords": ["angular", "dnn", "dotnetnuke", "angular-navigation", "navigation", "typescript"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apstory/apstorydnn-navigation-angular"
+  }
+}

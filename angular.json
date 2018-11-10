@@ -168,6 +168,41 @@
           }
         }
       }
+    },
+    "apstorydnn-navigation": {
+      "root": "projects/apstorydnn-navigation",
+      "sourceRoot": "projects/apstorydnn-navigation/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/apstorydnn-navigation/tsconfig.lib.json",
+            "project": "projects/apstorydnn-navigation/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/apstorydnn-navigation/src/test.ts",
+            "tsConfig": "projects/apstorydnn-navigation/tsconfig.spec.json",
+            "karmaConfig": "projects/apstorydnn-navigation/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/apstorydnn-navigation/tsconfig.lib.json",
+              "projects/apstorydnn-navigation/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "apstory-lib"

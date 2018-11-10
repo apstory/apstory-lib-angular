@@ -23,6 +23,12 @@
       ],
       "apstorymq-client/*": [
         "dist/apstorymq-client/*"
+      ],
+      "apstorydnn-navigation": [
+        "dist/apstorydnn-navigation"
+      ],
+      "apstorydnn-navigation/*": [
+        "dist/apstorydnn-navigation/*"
       ]
     }
   }
