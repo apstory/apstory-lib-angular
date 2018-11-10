@@ -2,5 +2,5 @@
 
 Apstory Angular 7 Libraries:
 
-- apstorymq-client
+- [I'm an inline-style link with title](https://github.com/apstory/apstory-lib-angular "apstorymq-client")
 - apstorydnn-navigation
