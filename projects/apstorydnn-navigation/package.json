@@ -8,6 +8,6 @@
   "keywords": ["angular", "dnn", "dotnetnuke", "angular-navigation", "navigation", "typescript"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/apstory/apstorydnn-navigation-angular"
+    "url": "https://github.com/apstory/apstory-lib-angular/tree/master/projects/apstorydnn-navigation"
   }
 }

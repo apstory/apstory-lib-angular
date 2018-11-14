@@ -8,6 +8,6 @@
   "keywords": ["angular", "library", "apstorymq", "message bus", "integration", "pub sub", "publish", "subscribe", "typescript"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/apstory/apstorymq-client-angular"
+    "url": "https://github.com/apstory/apstory-lib-angular/tree/master/projects/apstorymq-client"
   }
 }
