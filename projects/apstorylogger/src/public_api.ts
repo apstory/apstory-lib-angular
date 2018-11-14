@@ -3,3 +3,4 @@
  */
 
 export * from './lib/apstorylogger.service';
+export * from './lib/enum/apstory-logger-severity-enum';

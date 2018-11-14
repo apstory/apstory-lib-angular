@@ -13,5 +13,4 @@ export class ApstoryloggerModule {
       providers: [ApstoryloggerService, { provide: 'instrumentationKey', useValue: instrumentationKey }]
     };
   }
-
 }

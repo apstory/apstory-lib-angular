@@ -1,7 +1,6 @@
 import { Injectable, Inject } from '@angular/core';
 import { AppInsights } from 'applicationinsights-js';
 import { LoggerSeverityEnum } from './enum/apstory-logger-severity-enum';
-import { Properties } from 'projects/apstorymq-client/src/public_api';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +19,7 @@ export class ApstoryloggerService {
 
   logTrace(message: string, properties?: any, severityLevel?: any) {
     console.log('logTrace: ' + message + ', severityLevel: ' + LoggerSeverityEnum.Informational);
-    AppInsights.trackTrace(message, properties, severityLevel.);
+    AppInsights.trackTrace(message, properties, severityLevel);
   }
 
   async logTraceSeverity(message: string, loggerSeverity: LoggerSeverityEnum) {
