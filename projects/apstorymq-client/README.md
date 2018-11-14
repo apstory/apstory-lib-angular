@@ -4,7 +4,7 @@
 
 ## Installation
 
-To install this package run `npm i apstorymq-client`.
+To install this package run `npm i apstorymq-client-angular`.
 
 ## Registering an API key
 
