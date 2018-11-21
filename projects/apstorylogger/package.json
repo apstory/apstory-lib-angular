@@ -6,6 +6,9 @@
     "@angular/core": "^7.0.0"
   },
   "keywords": ["angular", "applicationinsights-js", "application-insights", "angular-applicationinsights", "microsoft application insights javascript sdk", "typescript", "javascript-sdk"],
+  "author": "Anthony Plews",
+  "license": "MIT",
+  "homepage": "http://www.apstory.co.za",
   "repository": {
     "type": "git",
     "url": "https://github.com/apstory/apstory-lib-angular/tree/master/projects/apstorylogger"
