@@ -6,6 +6,10 @@
 
 To install this package run `npm i apstorylogger-angular`.
 
+## Usage
+
+--
+
 ## Contact
 
 Please contact Apstory on apstoryza@gmail.com if you have any questions.
