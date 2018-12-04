@@ -41,6 +41,12 @@
       ],
       "apstorylogger/*": [
         "dist/apstorylogger/*"
+      ],
+      "apstoryloader": [
+        "dist/apstoryloader"
+      ],
+      "apstoryloader/*": [
+        "dist/apstoryloader/*"
       ]
     }
   }
