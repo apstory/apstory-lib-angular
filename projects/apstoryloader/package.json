@@ -1,0 +1,9 @@
+{
+  "name": "apstoryloader-angular",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^7.1.0",
+    "@angular/core": "^7.1.0",
+    "@progress/kendo-theme-bootstrap": "^2.14.2"
+  }
+}
