@@ -1,6 +1,6 @@
 {
   "name": "apstorymq-client-angular",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0"
