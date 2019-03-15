@@ -50,6 +50,26 @@ export class ApstorydnnNavigationService {
     return this.navStack.length > 0;
   }
 
+  popTo(screen: any) {
+    while (typeof (screen) != typeof (this.prevPage)) {
+      if (this.canPop()) {
+        this.prevPage = this.navStack.pop();
+      }
+    }
+
+    this.setComponent(this.prevPage);
+  }
+
+  popBack(nr: number) {
+    for (let i = 0; i < nr; i++) {
+      if (this.canPop()) {
+        this.prevPage = this.navStack.pop();
+      }
+    }
+
+    this.setComponent(this.prevPage);
+  }
+
   pop() {
     if (this.canPop()) {
       this.prevPage = this.navStack.pop();
