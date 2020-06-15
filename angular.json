@@ -273,6 +273,41 @@
           }
         }
       }
+    },
+    "Apstoryloader": {
+      "root": "projects/apstoryloader",
+      "sourceRoot": "projects/apstoryloader/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/apstoryloader/tsconfig.lib.json",
+            "project": "projects/apstoryloader/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/apstoryloader/src/test.ts",
+            "tsConfig": "projects/apstoryloader/tsconfig.spec.json",
+            "karmaConfig": "projects/apstoryloader/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/apstoryloader/tsconfig.lib.json",
+              "projects/apstoryloader/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "apstory-lib"

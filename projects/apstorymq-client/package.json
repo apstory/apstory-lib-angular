@@ -1,11 +1,14 @@
 {
   "name": "apstorymq-client-angular",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0"
   },
   "keywords": ["angular", "library", "apstorymq", "message bus", "integration", "pub sub", "publish", "subscribe", "typescript"],
+  "author": "Anthony Plews",
+  "license": "MIT",
+  "homepage": "http://www.apstory.co.za",
   "repository": {
     "type": "git",
     "url": "https://github.com/apstory/apstory-lib-angular/tree/master/projects/apstorymq-client"
