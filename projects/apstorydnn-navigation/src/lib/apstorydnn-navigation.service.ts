@@ -1,9 +1,11 @@
 import { Injectable, ViewContainerRef, ComponentRef, ComponentFactoryResolver } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApstorydnnNavigationService {
+  private subject = new Subject<any>();
 
   private params: any[];
   private prevPage: any;
@@ -14,6 +16,10 @@ export class ApstorydnnNavigationService {
   constructor(private componentFactory: ComponentFactoryResolver) {
     this.navStack = [];
     this.params = [];
+  }
+
+  getNavigationEvent(): Observable<any> {
+    return this.subject.asObservable();
   }
 
   private setComponent(type: any): void {
@@ -44,6 +50,7 @@ export class ApstorydnnNavigationService {
 
     this.setComponent(page);
     this.prevPage = page;
+    this.subject.next(page);
   }
 
   canPop() {
@@ -58,6 +65,7 @@ export class ApstorydnnNavigationService {
     }
 
     this.setComponent(this.prevPage);
+    this.subject.next(this.prevPage);
   }
 
   popBack(nr: number) {
@@ -68,12 +76,14 @@ export class ApstorydnnNavigationService {
     }
 
     this.setComponent(this.prevPage);
+    this.subject.next(this.prevPage);
   }
 
   pop() {
     if (this.canPop()) {
       this.prevPage = this.navStack.pop();
       this.setComponent(this.prevPage);
+      this.subject.next(this.prevPage);
     }
   }
 
