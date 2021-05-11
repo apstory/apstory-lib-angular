@@ -7,7 +7,7 @@ import { ApstoryloggerService } from './apstorylogger.service';
   exports: []
 })
 export class ApstoryloggerModule {
-  static forRoot(instrumentationKey: string): ModuleWithProviders {
+  static forRoot(instrumentationKey: string): ModuleWithProviders<ApstoryloggerModule> {
     return {
       ngModule: ApstoryloggerModule,
       providers: [ApstoryloggerService, { provide: 'instrumentationKey', useValue: instrumentationKey }]

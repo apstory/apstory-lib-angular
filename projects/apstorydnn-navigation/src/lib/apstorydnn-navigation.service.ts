@@ -50,7 +50,7 @@ export class ApstorydnnNavigationService {
 
     this.setComponent(page);
     this.prevPage = page;
-    this.subject.next(page);
+    this.subject.next(this.componentRef);
   }
 
   canPop() {
@@ -65,7 +65,7 @@ export class ApstorydnnNavigationService {
     }
 
     this.setComponent(this.prevPage);
-    this.subject.next(this.prevPage);
+    this.subject.next(this.componentRef);
   }
 
   popBack(nr: number) {
@@ -76,14 +76,14 @@ export class ApstorydnnNavigationService {
     }
 
     this.setComponent(this.prevPage);
-    this.subject.next(this.prevPage);
+    this.subject.next(this.componentRef);
   }
 
   pop() {
     if (this.canPop()) {
       this.prevPage = this.navStack.pop();
       this.setComponent(this.prevPage);
-      this.subject.next(this.prevPage);
+      this.subject.next(this.componentRef);
     }
   }
 
