@@ -21,6 +21,7 @@
     "@angular/router": "~11.2.13",
     "applicationinsights-js": "^1.0.20",
     "core-js": "^3.12.1",
+    "node-sass": "^6.0.0",
     "rxjs": "~7.0.0",
     "zone.js": "~0.11.4"
   },
