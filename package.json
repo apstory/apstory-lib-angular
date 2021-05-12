@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~11.2.13",
     "@angular/router": "~11.2.13",
     "applicationinsights-js": "^1.0.20",
+    "azure-pipelines-task-lib": "^3.1.2",
     "core-js": "^3.12.1",
     "node-sass": "^6.0.0",
     "rxjs": "~7.0.0",
