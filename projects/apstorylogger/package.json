@@ -1,9 +1,9 @@
 {
   "name": "apstorylogger-angular",
-  "version": "11.0.0",
+  "version": "12.0.0",
   "peerDependencies": {
-    "@angular/common": "^11.0.0",
-    "@angular/core": "^11.0.0"
+    "@angular/common": "^12.0.0",
+    "@angular/core": "^12.0.0"
   },
   "keywords": ["angular", "applicationinsights-js", "application-insights", "angular-applicationinsights", "microsoft application insights javascript sdk", "typescript", "javascript-sdk"],
   "author": "Anthony Plews",

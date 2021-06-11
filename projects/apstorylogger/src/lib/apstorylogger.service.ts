@@ -42,7 +42,7 @@ export class ApstoryloggerService {
 
   logException(exception: Error, handledAt?: string, properties?: any, measurements?: any) {
     console.log('logAppException: ' + exception.name + ', message: ' + exception.message + ', stackTrace: ' + exception.stack);
-    AppInsights.trackException(exception, handledAt, properties, measurements);
+    AppInsights.trackException(exception, handledAt, properties, measurements);    
     this.logTrace(name, null, LoggerSeverityEnum.Error);
   }
 
