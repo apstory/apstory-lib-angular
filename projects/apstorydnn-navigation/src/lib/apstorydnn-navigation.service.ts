@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Injectable, ViewContainerRef, ComponentRef, ComponentFactoryResolver } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
@@ -5,21 +6,39 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class ApstorydnnNavigationService {
-  private subject = new Subject<any>();
+  private navSubject = new Subject<any>();
+  private paramSubject = new Subject<any>();
 
-  private params: any[];
+  private params: { [key: string]: any[] };
   private prevPage: any;
   private navStack: any[];
   private componentHolder: ViewContainerRef;
   private componentRef: ComponentRef<any>;
 
-  constructor(private componentFactory: ComponentFactoryResolver) {
+  constructor(private componentFactory: ComponentFactoryResolver, private location: Location) {
     this.navStack = [];
-    this.params = [];
+    this.params = {};
+  }
+
+  setUrl(url: string) {
+    location.href = url;
+  }
+
+  getUrlParam(paramName: string) {
+    const urlParameters = new URLSearchParams(this.location.path(false));
+    return urlParameters.get(paramName);
+  }
+
+  clearUrlParams() {
+    this.location.replaceState('/', '');
   }
 
   getNavigationEvent(): Observable<any> {
-    return this.subject.asObservable();
+    return this.navSubject.asObservable();
+  }
+
+  getParameterEvent(): Observable<any> {
+    return this.paramSubject.asObservable();
   }
 
   private setComponent(type: any): void {
@@ -37,6 +56,7 @@ export class ApstorydnnNavigationService {
 
   setParam(key: string, value: any) {
     this.params[key] = value;
+    this.paramSubject.next(key);
   }
 
   getParam(key: string) {
@@ -50,7 +70,7 @@ export class ApstorydnnNavigationService {
 
     this.setComponent(page);
     this.prevPage = page;
-    this.subject.next(this.componentRef);
+    this.navSubject.next(this.componentRef);
   }
 
   canPop() {
@@ -65,7 +85,7 @@ export class ApstorydnnNavigationService {
     }
 
     this.setComponent(this.prevPage);
-    this.subject.next(this.componentRef);
+    this.navSubject.next(this.componentRef);
   }
 
   popBack(nr: number) {
@@ -76,15 +96,14 @@ export class ApstorydnnNavigationService {
     }
 
     this.setComponent(this.prevPage);
-    this.subject.next(this.componentRef);
+    this.navSubject.next(this.componentRef);
   }
 
   pop() {
     if (this.canPop()) {
       this.prevPage = this.navStack.pop();
       this.setComponent(this.prevPage);
-      this.subject.next(this.componentRef);
+      this.navSubject.next(this.componentRef);
     }
   }
-
 }
