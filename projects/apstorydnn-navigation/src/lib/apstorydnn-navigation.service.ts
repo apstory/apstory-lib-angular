@@ -9,7 +9,7 @@ export class ApstorydnnNavigationService {
   private navSubject = new Subject<any>();
   private paramSubject = new Subject<any>();
 
-  private params: { [key: string]: any[] };
+  private params: { [key: string]: any };
   private prevPage: any;
   private navStack: any[];
   private componentHolder: ViewContainerRef;
@@ -25,7 +25,9 @@ export class ApstorydnnNavigationService {
   }
 
   getUrlParam(paramName: string) {
-    const urlParameters = new URLSearchParams(this.location.path(false));
+    const path = this.location.path(false);
+    const queryString = path.substr(path.indexOf('?') + 1);
+    const urlParameters = new URLSearchParams(queryString);
     return urlParameters.get(paramName);
   }
 
