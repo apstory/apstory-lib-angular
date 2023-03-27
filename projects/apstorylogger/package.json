@@ -1,10 +1,7 @@
 {
-  "name": "apstorylogger-angular",
+  "name": "@apstory/logger-angular",
   "version": "15.0.1",
-  "peerDependencies": {
-    "@angular/common": "^15.2.4",
-    "@angular/core": "^15.2.4"
-  },
+  "private": false,
   "keywords": [
     "angular",
     "applicationinsights-js",
@@ -14,12 +11,16 @@
     "typescript",
     "javascript-sdk"
   ],
-  "author": "Anthony Plews",
+  "author": "apstory",
   "license": "MIT",
-  "homepage": "http://www.apstory.co.za",
+  "homepage": "https://www.apstory.co.za",
   "repository": {
     "type": "git",
     "url": "https://github.com/apstory/apstory-lib-angular/tree/master/projects/apstorylogger"
+  },
+  "peerDependencies": {
+    "@angular/common": "^15.2.4",
+    "@angular/core": "^15.2.4"
   },
   "devDependencies": {
     "@types/applicationinsights-js": "^1.0.9"
