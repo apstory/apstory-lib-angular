@@ -1,16 +1,16 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { ApstoryloggerService } from './apstorylogger.service';
+import { ApstoryLoggerService } from './apstorylogger.service';
 
 @NgModule({
   declarations: [],
   imports: [],
   exports: []
 })
-export class ApstoryloggerModule {
-  static forRoot(instrumentationKey: string): ModuleWithProviders<ApstoryloggerModule> {
+export class ApstoryLoggerModule {
+  static forRoot(instrumentationKey: string): ModuleWithProviders<ApstoryLoggerModule> {
     return {
-      ngModule: ApstoryloggerModule,
-      providers: [ApstoryloggerService, { provide: 'instrumentationKey', useValue: instrumentationKey }]
+      ngModule: ApstoryLoggerModule,
+      providers: [ApstoryLoggerService, { provide: 'instrumentationKey', useValue: instrumentationKey }]
     };
   }
 }

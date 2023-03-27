@@ -5,7 +5,7 @@ import { LoggerSeverityEnum } from './enum/apstory-logger-severity-enum';
 @Injectable({
   providedIn: 'root'
 })
-export class ApstoryloggerService {
+export class ApstoryLoggerService {
 
   private config: Microsoft.ApplicationInsights.IConfig = {
     instrumentationKey: this.instrumentationKey
