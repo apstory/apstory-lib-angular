@@ -1,6 +1,6 @@
 {
   "name": "@apstory/logger-angular",
-  "version": "15.0.4",
+  "version": "15.1.0",
   "private": false,
   "keywords": [
     "angular",
@@ -20,7 +20,8 @@
   },
   "peerDependencies": {
     "@angular/common": "^15.2.4",
-    "@angular/core": "^15.2.4"
+    "@angular/core": "^15.2.4",
+    "@microsoft/applicationinsights-web": "^2.8.11"
   },
   "devDependencies": {
     "@types/applicationinsights-js": "^1.0.9"

@@ -1,8 +1,7 @@
 export enum LoggerSeverityEnum {
-    Critical,
-    Error,
-    Informational,
-    LogAlways,
-    Verbose,
-    Warning
+    Verbose = 0,
+    Information = 1,
+    Warning = 2,
+    Error = 3,
+    Critical = 4
 }
