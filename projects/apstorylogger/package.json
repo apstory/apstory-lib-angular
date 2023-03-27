@@ -1,11 +1,19 @@
 {
   "name": "apstorylogger-angular",
-  "version": "15.2.1",
+  "version": "15.0.1",
   "peerDependencies": {
-    "@angular/common": "^15.2.1",
-    "@angular/core": "^15.2.1"
+    "@angular/common": "^15.2.4",
+    "@angular/core": "^15.2.4"
   },
-  "keywords": ["angular", "applicationinsights-js", "application-insights", "angular-applicationinsights", "microsoft application insights javascript sdk", "typescript", "javascript-sdk"],
+  "keywords": [
+    "angular",
+    "applicationinsights-js",
+    "application-insights",
+    "angular-applicationinsights",
+    "microsoft application insights javascript sdk",
+    "typescript",
+    "javascript-sdk"
+  ],
   "author": "Anthony Plews",
   "license": "MIT",
   "homepage": "http://www.apstory.co.za",
@@ -14,6 +22,6 @@
     "url": "https://github.com/apstory/apstory-lib-angular/tree/master/projects/apstorylogger"
   },
   "devDependencies": {
-    "@types/applicationinsights-js": "^1.0.7"
+    "@types/applicationinsights-js": "^1.0.9"
   }
 }
