@@ -11,8 +11,7 @@ export class ApstoryLoggerService {
   private appInsights = new ApplicationInsights({
     config: {
       instrumentationKey: this.instrumentationKey,
-      loggingLevelConsole: this.loggingLevelConsole,
-      ignoreClientErrors: this.ignoreClientErrors
+      loggingLevelConsole: this.loggingLevelConsole
     }
   });
 
