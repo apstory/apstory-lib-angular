@@ -1,6 +1,7 @@
 import { Inject, Injectable } from '@angular/core';
 import { ApplicationInsights } from '@microsoft/applicationinsights-web';
 import { LoggerSeverityEnum } from './enum/apstory-logger-severity-enum';
+import { ClientError } from '../public-api';
 
 @Injectable({
   providedIn: 'root'
@@ -10,13 +11,15 @@ export class ApstoryLoggerService {
   private appInsights = new ApplicationInsights({
     config: {
       instrumentationKey: this.instrumentationKey,
-      loggingLevelConsole: this.loggingLevelConsole
+      loggingLevelConsole: this.loggingLevelConsole,
+      ignoreClientErrors: this.ignoreClientErrors
     }
   });
 
   constructor(
     @Inject('instrumentationKey') private instrumentationKey: string,
-    @Inject('loggingLevelConsole') private loggingLevelConsole: number = 0) {
+    @Inject('loggingLevelConsole') private loggingLevelConsole: number = 0,
+    @Inject('ignoreClientErrors') private ignoreClientErrors: boolean = false) {
     this.appInsights.loadAppInsights();
   }
 
@@ -49,6 +52,10 @@ export class ApstoryLoggerService {
 
   async logException(exception: Error, handledAt?: string, properties?: any, measurements?: any, severityLevel?: any, id?: string) {
     if (this.loggingLevelConsole === 1) { console.log(exception); }
+    if (this.ignoreClientErrors && exception instanceof ClientError) {
+      return;
+    }
+
     this.appInsights.trackException({ exception, properties, measurements, severityLevel, id });
   }
 
