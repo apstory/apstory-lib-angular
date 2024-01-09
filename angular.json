@@ -311,7 +311,6 @@
       }
     }
   },
-  "defaultProject": "apstory-lib",
   "cli": {
     "analytics": false
   }
