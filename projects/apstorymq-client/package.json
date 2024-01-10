@@ -6,9 +6,9 @@
     "@angular/core": "^16.2.12"
   },
   "keywords": ["angular", "library", "apstorymq", "message bus", "integration", "pub sub", "publish", "subscribe", "typescript"],
-  "author": "Anthony Plews",
+  "author": "apstory",
   "license": "MIT",
-  "homepage": "http://www.apstory.co.za",
+  "homepage": "http://www.apstory.io",
   "repository": {
     "type": "git",
     "url": "https://github.com/apstory/apstory-lib-angular/tree/master/projects/apstorymq-client"

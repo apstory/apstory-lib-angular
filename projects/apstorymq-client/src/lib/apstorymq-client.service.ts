@@ -1,67 +1,64 @@
 import { Injectable } from '@angular/core';
-import { Http, RequestOptions } from '@angular/http';
 import { Message } from '../model/message';
 import { Messages } from '../model/messages';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApstorymqClientService {
 
-  constructor(public http: Http) { }
+  constructor(public http: HttpClient) { }
 
   private apiUrl: string;
   private client: string;
   private key: string;
 
-  async init(apiUrl: string, key: string, client: string) {
+  public async init(apiUrl: string, key: string, client: string) {
     this.apiUrl = apiUrl;
     this.key = key;
     this.client = client;
   }
 
-  async createSubscription(topic: string) {
+  public async createSubscription(topic: string) {
     try {
-      await this.http.get(this.apiUrl + 'message?key=' + this.key + '&client=' + this.client + '&topic=' + topic + '&pageSize=1').toPromise();
+      await this.http.get(this.apiUrl + 'message?key=' + this.key + '&client=' + this.client + '&topic=' + topic + '&pageSize=1');
     } catch (error) {
       await this.handleError(error);
     }
   }
 
-  async publish(topic: string, messages: Message[]): Promise<Message[]> {
+  public async publish(topic: string, messages: Message[]): Promise<Message[]> {
     try {
-      const response = await this.http.post(this.apiUrl + 'message?key=' + this.key + '&client=' + this.client + '&topic=' + topic, messages).toPromise();
-      return response.json();
+      return await this.http.post<Message[]>(this.apiUrl + 'message?key=' + this.key + '&client=' + this.client + '&topic=' + topic, messages).toPromise();
+
     } catch (error) {
       await this.handleError(error);
     }
   }
 
-  async subscribe(topic: string): Promise<Messages> {
+  public async subscribe(topic: string): Promise<Messages> {
     try {
-      const response = await this.http.get(this.apiUrl + 'message?key=' + this.key + '&client=' + this.client + '&topic=' + topic + '&pageSize=200').toPromise();
-      return response.json();
+      return await this.http.get<Messages>(this.apiUrl + 'message?key=' + this.key + '&client=' + this.client + '&topic=' + topic + '&pageSize=200').toPromise();
     } catch (error) {
       await this.handleError(error);
     }
   }
 
-  async commit(topic: string, messageId: number): Promise<Boolean> {
+  public async commit(topic: string, messageId: number): Promise<Boolean> {
     try {
-      const response = await this.http.delete(this.apiUrl + 'message/' + messageId + '?key=' + this.key + '&client=' + this.client + '&topic=' + topic).toPromise();
-      return response.json();
+      const response = await this.http.delete<Boolean>(this.apiUrl + 'message/' + messageId + '?key=' + this.key + '&client=' + this.client + '&topic=' + topic).toPromise();
+      return response;
     } catch (error) {
       await this.handleError(error);
     }
   }
 
-  async commitMessageList(topic: string, messages: Message[]): Promise<Message[]> {
+  public async commitMessageList(topic: string, messages: Message[]): Promise<Message[]> {
     try {
-      const response = await this.http.delete(this.apiUrl + 'message/?key=' + this.key + '&client=' + this.client + '&topic=' + topic,
-        new RequestOptions({
-          body: messages
-        })).toPromise();
-      return response.json();
+      const options = { body: messages };
+      return await this.http.delete<Message[]>(this.apiUrl + 'message/?key=' + this.key + '&client=' + this.client + '&topic=' + topic,
+      options).toPromise();
     } catch (error) {
       await this.handleError(error);
     }

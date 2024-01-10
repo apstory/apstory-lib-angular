@@ -205,41 +205,6 @@
         }
       }
     },
-    "apstorylogger-client": {
-      "root": "projects/apstorylogger-client",
-      "sourceRoot": "projects/apstorylogger-client/src",
-      "projectType": "library",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/apstorylogger-client/tsconfig.lib.json",
-            "project": "projects/apstorylogger-client/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/apstorylogger-client/src/test.ts",
-            "tsConfig": "projects/apstorylogger-client/tsconfig.spec.json",
-            "karmaConfig": "projects/apstorylogger-client/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/apstorylogger-client/tsconfig.lib.json",
-              "projects/apstorylogger-client/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
     "apstorylogger": {
       "root": "projects/apstorylogger",
       "sourceRoot": "projects/apstorylogger/src",
@@ -275,7 +240,7 @@
         }
       }
     },
-    "Apstoryloader": {
+    "apstoryloader": {
       "root": "projects/apstoryloader",
       "sourceRoot": "projects/apstoryloader/src",
       "projectType": "library",

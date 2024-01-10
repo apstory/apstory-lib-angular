@@ -2,7 +2,7 @@
 
 # Apstory Angular Libraries
 
-Apstory Angular 15 Libraries:
+Apstory Angular 16 Libraries:
 
 - [apstorymq-client-angular](https://github.com/apstory/apstory-lib-angular/tree/master/projects/apstorymq-client "apstorymq-client")
 - [apstorydnn-navigation-angular](https://github.com/apstory/apstory-lib-angular/tree/master/projects/apstorydnn-navigation "apstorydnn-navigation")
