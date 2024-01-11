@@ -22,7 +22,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    ApstoryloggerModule.forRoot('instrument key here')
+    ApstoryloggerModule.forRoot('YOUR_instrumentationKey_GOES_HERE')
   ],
   providers: [ApstoryloggerService],
   bootstrap: [AppComponent]
@@ -37,5 +37,5 @@ Please contact Apstory on apstoryza@gmail.com if you have any questions.
 
 ## Microsoft Application Insights JavaScript SDK
 
-https://www.npmjs.com/package/applicationinsights-js
+https://www.npmjs.com/package/@microsoft/applicationinsights-web
 

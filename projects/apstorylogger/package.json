@@ -1,10 +1,10 @@
 {
   "name": "@apstory/logger-angular",
-  "version": "16.2.12",
+  "version": "16.2.25",
   "private": false,
   "keywords": [
     "angular",
-    "applicationinsights-js",
+    "applicationinsights-web",
     "application-insights",
     "angular-applicationinsights",
     "microsoft application insights javascript sdk",
@@ -21,9 +21,6 @@
   "peerDependencies": {
     "@angular/common": "^16.2.12",
     "@angular/core": "^16.2.12",
-    "@microsoft/applicationinsights-web": "^2.8.11"
-  },
-  "devDependencies": {
-    "@types/applicationinsights-js": "^1.0.9"
+    "@microsoft/applicationinsights-web": "^3.0.7"
   }
 }
