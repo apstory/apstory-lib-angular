@@ -10,19 +10,10 @@ export class ApstoryLoggerService {
 
   private appInsights: ApplicationInsights;
 
-  // private appInsights = new ApplicationInsights({
-  //   config: {
-  //     instrumentationKey: this.instrumentationKey,
-  //     loggingLevelConsole: this.loggingLevelConsole,
-  //   }
-  // });
-
   constructor(
     @Inject('instrumentationKey') private instrumentationKey: string,
     @Inject('loggingLevelConsole') private loggingLevelConsole: number = 0,
     @Inject('ignoreClientErrors') private ignoreClientErrors: boolean = false) {
-    // console.log(this.appInsights.config);
-    // this.appInsights.loadAppInsights();
   }
 
   private async loadAppInsights() {
