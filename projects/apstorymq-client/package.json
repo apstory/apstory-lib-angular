@@ -1,9 +1,9 @@
 {
   "name": "apstorymq-client-angular",
-  "version": "16.2.12",
+  "version": "17.0.9",
   "peerDependencies": {
-    "@angular/common": "^16.2.12",
-    "@angular/core": "^16.2.12"
+    "@angular/common": "^17.0.9",
+    "@angular/core": "^17.0.9"
   },
   "keywords": ["angular", "library", "apstorymq", "message bus", "integration", "pub sub", "publish", "subscribe", "typescript"],
   "author": "apstory",

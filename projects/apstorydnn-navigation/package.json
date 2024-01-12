@@ -1,15 +1,15 @@
 {
   "name": "apstorydnn-navigation-angular",
-  "version": "16.2.12",
+  "version": "17.0.9",
   "peerDependencies": {
-    "@angular/common": "^16.2.12",
-    "@angular/core": "^16.2.12",
+    "@angular/common": "^17.0.9",
+    "@angular/core": "^17.0.9",
     "rxjs": "^7.5.6"
   },
   "keywords": ["angular", "dnn", "dotnetnuke", "angular-navigation", "navigation", "typescript"],
   "author": "Anthony Plews",
   "license": "MIT",
-  "homepage": "http://www.apstory.co.za",
+  "homepage": "http://www.apstory.io",
   "repository": {
     "type": "git",
     "url": "https://github.com/apstory/apstory-lib-angular/tree/master/projects/apstorydnn-navigation"
