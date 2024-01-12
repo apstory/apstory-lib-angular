@@ -57,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "apstory-lib:build"
+            "buildTarget": "apstory-lib:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "apstory-lib:build:production"
+              "buildTarget": "apstory-lib:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "apstory-lib:build"
+            "buildTarget": "apstory-lib:build"
           }
         },
         "test": {
