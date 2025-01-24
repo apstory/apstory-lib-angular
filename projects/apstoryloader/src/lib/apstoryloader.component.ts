@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-apstoryloader',
-  templateUrl: './apstoryloader.component.html',
-  styles: []
+    selector: 'lib-apstoryloader',
+    templateUrl: './apstoryloader.component.html',
+    styles: [],
+    standalone: false
 })
 export class ApstoryloaderComponent implements OnInit {
   constructor() { }
