@@ -137,7 +137,7 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular/build:ng-packagr",
           "options": {
             "tsConfig": "projects/apstorymq-client/tsconfig.lib.json",
             "project": "projects/apstorymq-client/ng-package.json"
@@ -172,7 +172,7 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular/build:ng-packagr",
           "options": {
             "tsConfig": "projects/apstorydnn-navigation/tsconfig.lib.json",
             "project": "projects/apstorydnn-navigation/ng-package.json"
@@ -212,7 +212,7 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular/build:ng-packagr",
           "options": {
             "tsConfig": "projects/apstorylogger/tsconfig.lib.json",
             "project": "projects/apstorylogger/ng-package.json"
@@ -247,7 +247,7 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular/build:ng-packagr",
           "options": {
             "tsConfig": "projects/apstoryloader/tsconfig.lib.json",
             "project": "projects/apstoryloader/ng-package.json"

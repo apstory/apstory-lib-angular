@@ -1,6 +1,6 @@
 {
   "name": "@apstory/logger-angular",
-  "version": "20.2.5",
+  "version": "21.1.0",
   "private": false,
   "keywords": [
     "angular",
@@ -19,8 +19,8 @@
     "url": "https://github.com/apstory/apstory-lib-angular/tree/master/projects/apstorylogger"
   },
   "peerDependencies": {
-    "@angular/common": "^20.2.4",
-    "@angular/core": "^20.2.4",
+    "@angular/common": "^21.1.0",
+    "@angular/core": "^21.1.0",
     "@microsoft/applicationinsights-web": "^3.0.7"
   }
 }

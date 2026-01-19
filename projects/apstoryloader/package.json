@@ -1,12 +1,12 @@
 {
   "name": "apstoryloader-angular",
-  "version": "20.2.4",
+  "version": "21.1.0",
   "author": "apstory",
   "license": "MIT",
   "homepage": "https://www.apstory.io",
   "peerDependencies": {
-    "@angular/common": "^20.2.4",
-    "@angular/core": "^20.2.4",
+    "@angular/common": "^21.1.0",
+    "@angular/core": "^21.1.0",
     "@progress/kendo-theme-bootstrap": "^6.2.0"
   }
 }

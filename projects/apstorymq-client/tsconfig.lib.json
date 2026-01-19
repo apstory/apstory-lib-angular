@@ -4,13 +4,14 @@
     "outDir": "../../out-tsc/lib",
     "target": "es2015",
     "module": "es2015",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "declaration": true,
     "sourceMap": true,
     "inlineSources": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
+    "skipLibCheck": true,
     "types": [],
     "lib": [
       "dom",
@@ -18,6 +19,7 @@
     ]
   },
   "angularCompilerOptions": {
+    "compilationMode": "partial",
     "annotateForClosureCompiler": true,
     "skipTemplateCodegen": true,
     "strictMetadataEmit": true,

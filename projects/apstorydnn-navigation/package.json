@@ -1,9 +1,9 @@
 {
   "name": "apstorydnn-navigation-angular",
-  "version": "20.2.4",
+  "version": "21.1.0",
   "peerDependencies": {
-    "@angular/common": "^20.2.4",
-    "@angular/core": "^20.2.4",
+    "@angular/common": "^21.1.0",
+    "@angular/core": "^21.1.0",
     "rxjs": "^7.5.6"
   },
   "keywords": ["angular", "dnn", "dotnetnuke", "angular-navigation", "navigation", "typescript"],
