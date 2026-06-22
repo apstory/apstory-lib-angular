@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { Injectable, ViewContainerRef, ComponentRef, ComponentFactoryResolver } from '@angular/core';
+import { Injectable, ViewContainerRef, ComponentRef, inject } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
 @Injectable({
@@ -12,10 +12,11 @@ export class ApstorydnnNavigationService {
   private params: { [key: string]: any };
   private prevPage: any;
   private navStack: any[];
-  private componentHolder: ViewContainerRef;
-  private componentRef: ComponentRef<any>;
+  private componentHolder!: ViewContainerRef;
+  private componentRef!: ComponentRef<any>;
+  private location = inject(Location);
 
-  constructor(private componentFactory: ComponentFactoryResolver, private location: Location) {
+  constructor() {
     this.navStack = [];
     this.params = {};
   }
@@ -48,8 +49,7 @@ export class ApstorydnnNavigationService {
       this.componentRef.destroy();
     }
 
-    const factory = this.componentFactory.resolveComponentFactory(type);
-    this.componentRef = this.componentHolder.createComponent(factory);
+    this.componentRef = this.componentHolder.createComponent(type);
   }
 
   setup(navHolder: ViewContainerRef) {

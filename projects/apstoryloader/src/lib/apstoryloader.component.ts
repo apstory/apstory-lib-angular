@@ -10,7 +10,7 @@ export class ApstoryloaderComponent implements OnInit {
   constructor() { }
 
   public isBusy = false;
-  public busyText: string;
+  public busyText!: string;
 
   ngOnInit() {
   }

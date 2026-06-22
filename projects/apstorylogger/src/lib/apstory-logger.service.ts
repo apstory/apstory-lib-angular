@@ -8,8 +8,8 @@ import { ClientError } from './model/client-error';
 })
 export class ApstoryLoggerService {
 
-  private appInsights: ApplicationInsights;
-  private initializationPromise: Promise<void>;
+  private appInsights!: ApplicationInsights;
+  private initializationPromise!: Promise<void>;
 
   constructor(
     @Inject('instrumentationKey') private instrumentationKey: string,

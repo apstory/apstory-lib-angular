@@ -1,14 +1,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "importHelpers": true,
-    "downlevelIteration": true,
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "skipLibCheck": true,
@@ -22,34 +20,34 @@
     ],
     "paths": {
       "apstorymq-client": [
-        "dist/apstorymq-client"
+        "./dist/apstorymq-client"
       ],
       "apstorymq-client/*": [
-        "dist/apstorymq-client/*"
+        "./dist/apstorymq-client/*"
       ],
       "apstorydnn-navigation": [
-        "dist/apstorydnn-navigation"
+        "./dist/apstorydnn-navigation"
       ],
       "apstorydnn-navigation/*": [
-        "dist/apstorydnn-navigation/*"
+        "./dist/apstorydnn-navigation/*"
       ],
       "apstorylogger-client": [
-        "dist/apstorylogger-client"
+        "./dist/apstorylogger-client"
       ],
       "apstorylogger-client/*": [
-        "dist/apstorylogger-client/*"
+        "./dist/apstorylogger-client/*"
       ],
       "apstorylogger": [
-        "dist/apstorylogger"
+        "./dist/apstorylogger"
       ],
       "apstorylogger/*": [
-        "dist/apstorylogger/*"
+        "./dist/apstorylogger/*"
       ],
       "apstoryloader": [
-        "dist/apstoryloader"
+        "./dist/apstoryloader"
       ],
       "apstoryloader/*": [
-        "dist/apstoryloader/*"
+        "./dist/apstoryloader/*"
       ]
     }
   }

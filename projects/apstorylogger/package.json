@@ -19,8 +19,8 @@
     "url": "https://github.com/apstory/apstory-lib-angular/tree/master/projects/apstorylogger"
   },
   "peerDependencies": {
-    "@angular/common": "^21.1.0",
-    "@angular/core": "^21.1.0",
+    "@angular/common": "^22.0.2",
+    "@angular/core": "^22.0.2",
     "@microsoft/applicationinsights-web": "^3.0.7"
   }
 }

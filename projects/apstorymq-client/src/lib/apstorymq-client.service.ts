@@ -10,9 +10,9 @@ export class ApstorymqClientService {
 
   constructor(public http: HttpClient) { }
 
-  private apiUrl: string;
-  private client: string;
-  private key: string;
+  private apiUrl!: string;
+  private client!: string;
+  private key!: string;
 
   public async init(apiUrl: string, key: string, client: string) {
     this.apiUrl = apiUrl;
@@ -28,7 +28,7 @@ export class ApstorymqClientService {
     }
   }
 
-  public async publish(topic: string, messages: Message[]): Promise<Message[]> {
+  public async publish(topic: string, messages: Message[]): Promise<Message[] | undefined> {
     try {
       return await this.http.post<Message[]>(this.apiUrl + 'message?key=' + this.key + '&client=' + this.client + '&topic=' + topic, messages).toPromise();
 
@@ -37,7 +37,7 @@ export class ApstorymqClientService {
     }
   }
 
-  public async subscribe(topic: string): Promise<Messages> {
+  public async subscribe(topic: string): Promise<Messages | undefined> {
     try {
       return await this.http.get<Messages>(this.apiUrl + 'message?key=' + this.key + '&client=' + this.client + '&topic=' + topic + '&pageSize=200').toPromise();
     } catch (error) {
@@ -45,7 +45,7 @@ export class ApstorymqClientService {
     }
   }
 
-  public async commit(topic: string, messageId: number): Promise<Boolean> {
+  public async commit(topic: string, messageId: number): Promise<Boolean | undefined> {
     try {
       const response = await this.http.delete<Boolean>(this.apiUrl + 'message/' + messageId + '?key=' + this.key + '&client=' + this.client + '&topic=' + topic).toPromise();
       return response;
@@ -54,7 +54,7 @@ export class ApstorymqClientService {
     }
   }
 
-  public async commitMessageList(topic: string, messages: Message[]): Promise<Message[]> {
+  public async commitMessageList(topic: string, messages: Message[]): Promise<Message[] | undefined> {
     try {
       const options = { body: messages };
       return await this.http.delete<Message[]>(this.apiUrl + 'message/?key=' + this.key + '&client=' + this.client + '&topic=' + topic,
@@ -64,7 +64,7 @@ export class ApstorymqClientService {
     }
   }
 
-  private async handleError(error: Error) {
+  private async handleError(error: unknown) {
     console.error(error);
   }
 }
